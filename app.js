@@ -39,49 +39,44 @@ const aboutState = function(page) {
 const contactState = function(page) {
   document.querySelector("#heading").textContent = "Contact Us";
   document.querySelector("#content").innerHTML = `
-  <!-- Default form login -->
+  <!-- Default form contact -->
   <form class="text-center border border-light p-5" action="#!">
   
-      <p class="h4 mb-4">Sign in</p>
+      <p class="h4 mb-4">Contact us</p>
+  
+      <!-- Name -->
+      <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
   
       <!-- Email -->
-      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+      <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
   
-      <!-- Password -->
-      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+      <!-- Subject -->
+      <label>Subject</label>
+      <select class="browser-default custom-select mb-4">
+          <option value="" disabled>Choose option</option>
+          <option value="1" selected>Feedback</option>
+          <option value="2">Report a bug</option>
+          <option value="3">Feature request</option>
+          <option value="4">Feature request</option>
+      </select>
   
-      <div class="d-flex justify-content-around">
-          <div>
-              <!-- Remember me -->
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                  <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-              </div>
-          </div>
-          <div>
-              <!-- Forgot password -->
-              <a href="">Forgot password?</a>
-          </div>
+      <!-- Message -->
+      <div class="form-group">
+          <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
       </div>
   
-      <!-- Sign in button -->
-      <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+      <!-- Copy -->
+      <div class="custom-control custom-checkbox mb-4">
+          <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+          <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+      </div>
   
-      <!-- Register -->
-      <p>Not a member?
-          <a href="">Register</a>
-      </p>
-  
-      <!-- Social login -->
-      <p>or sign in with:</p>
-  
-      <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-      <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-      <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-      <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+      <!-- Send button -->
+      <button class="btn btn-info btn-block" type="submit">Send</button>
   
   </form>
-  <!-- Default form login -->
+  <!-- Default form contact -->
+        
   `;
 };
 
